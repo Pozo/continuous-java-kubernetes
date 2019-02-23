@@ -1,4 +1,5 @@
 plugins {
+    id 'com.google.cloud.tools.jib' version '1.0.0'
     id 'org.springframework.boot' version '2.1.2.RELEASE'
     id 'java'
 }
@@ -11,6 +12,16 @@ sourceCompatibility = '1.8'
 
 repositories {
     mavenCentral()
+}
+
+jib {
+    to {
+        image = 'com.github.pozo/spring-boot-jib'
+    }
+    container {
+        useCurrentTimestamp = true
+        ports = ['55000']
+    }
 }
 
 dependencies {

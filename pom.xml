@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <jib-maven-plugin.version>1.0.0</jib-maven-plugin.version>
     </properties>
 
     <dependencies>
@@ -36,6 +37,22 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>${jib-maven-plugin.version}</version>
+                <configuration>
+                    <to>
+                        <image>com.github.pozo/spring-boot-jib</image>
+                    </to>
+                    <container>
+                        <useCurrentTimestamp>true</useCurrentTimestamp>
+                        <ports>
+                            <port>55000</port>
+                        </ports>
+                    </container>
+                </configuration>
             </plugin>
         </plugins>
     </build>
