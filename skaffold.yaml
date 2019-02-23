@@ -8,6 +8,11 @@ build:
       jibGradle: {}
      # jibMaven: {}
 deploy:
-  kubectl:
-    manifests:
-      - kubernetes/*.yaml
+  helm:
+    releases:
+      - name: spring-boot-jib
+        chartPath: helm
+        values:
+          image.repository: com.github.pozo/spring-boot-jib
+        setValues:
+          image.tag: ""

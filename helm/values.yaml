@@ -1,0 +1,34 @@
+replicaCount: 1
+
+image:
+  repository: com.github.pozo/spring-boot-jib
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: "spring-boot-jib"
+
+service:
+  type: LoadBalancer
+  port: 8080
+  containerPort: 55000
+
+container:
+  ports:
+    - name: http
+      containerPort: 55000
+      protocol: TCP
+
+resources:
+  limits:
+    cpu: 1
+    memory: 512Mi
+  requests:
+    cpu: 1
+    memory: 512Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
