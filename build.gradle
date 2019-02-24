@@ -20,7 +20,10 @@ jib {
     }
     container {
         useCurrentTimestamp = true
-        ports = ['55000']
+        ports = ['55000', '5005']
+        jvmFlags = [
+                '-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005'
+        ]
     }
 }
 

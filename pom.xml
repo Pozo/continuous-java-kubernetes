@@ -50,7 +50,11 @@
                         <useCurrentTimestamp>true</useCurrentTimestamp>
                         <ports>
                             <port>55000</port>
+                            <port>5005</port>
                         </ports>
+                        <jvmFlags>
+                            <jvmFlag>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</jvmFlag>
+                        </jvmFlags>
                     </container>
                 </configuration>
             </plugin>

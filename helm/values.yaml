@@ -18,6 +18,9 @@ container:
     - name: http
       containerPort: 55000
       protocol: TCP
+    - name: debug
+      containerPort: 5005
+      protocol: TCP
 
 resources:
   limits:
