@@ -1,6 +1,6 @@
 # continuous-java-kubernetes
 
-This repository contains the source code of the [Continuous Development with Java and Kubernetes](https://dev.to/pozo/continuous-development-in-java-with-jib-and-skaffold-for-kubernetes-2gjl-temp-slug-6257963) article.
+This repository contains the source code of the [Continuous Development with Java and Kubernetes](https://dev.to/pozo/continuous-development-with-java-and-kubernetes-3d08) article.
 
 #### Used environment
 
